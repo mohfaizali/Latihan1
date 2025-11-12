@@ -1,0 +1,155 @@
+LANGKAH 1
+
+#MEMBUAT FOLDER
+mohamadfaiz@mohamadfaiz-VirtualBox:~$ mkdir projek
+mohamadfaiz@mohamadfaiz-VirtualBox:~$ cd projek
+mohamadfaiz@mohamadfaiz-VirtualBox:~/projek$ mkdir documents images archives logs
+mohamadfaiz@mohamadfaiz-VirtualBox:~/projek$ tree
+.
+├── archives
+├── documents
+├── images
+└── logs
+
+#MEMBUAT FILE
+mohamadfaiz@mohamadfaiz-VirtualBox:~/projek$ touch file{1..5}.txt
+mohamadfaiz@mohamadfaiz-VirtualBox:~/projek$ touch gambar{1..5}.jpg
+mohamadfaiz@mohamadfaiz-VirtualBox:~/projek$ touch data{1..5}.zip
+mohamadfaiz@mohamadfaiz-VirtualBox:~/projek$ touch file{1..5}.log
+mohamadfaiz@mohamadfaiz-VirtualBox:~/projek$ tree
+.
+├── archives
+├── data1.zip
+├── data2.zip
+├── data3.zip
+├── data4.zip
+├── data5.zip
+├── documents
+├── file1.log
+├── file1.txt
+├── file2.log
+├── file2.txt
+├── file3.log
+├── file3.txt
+├── file4.log
+├── file4.txt
+├── file5.log
+├── file5.txt
+├── gambar1.jpg
+├── gambar2.jpg
+├── gambar3.jpg
+├── gambar4.jpg
+├── gambar5.jpg
+├── images
+└── logs
+
+#MENGISI FILE
+mohamadfaiz@mohamadfaiz-VirtualBox:~/projek$ echo "ini isi dari file1" > file1.txt
+mohamadfaiz@mohamadfaiz-VirtualBox:~/projek$ echo "ini isi dari file2" > file2.txt
+mohamadfaiz@mohamadfaiz-VirtualBox:~/projek$ echo "ini isi dari file3" > file3.txt
+mohamadfaiz@mohamadfaiz-VirtualBox:~/projek$ echo "ini isi dari file4" > file4.txt
+mohamadfaiz@mohamadfaiz-VirtualBox:~/projek$ echo "ini isi dari file5" > file5.txt
+mohamadfaiz@mohamadfaiz-VirtualBox:~/projek$ echo "ini isi dari gambar1" > gambar1.jpg
+mohamadfaiz@mohamadfaiz-VirtualBox:~/projek$ echo "ini isi dari gambar2" > gambar2.jpg
+mohamadfaiz@mohamadfaiz-VirtualBox:~/projek$ echo "ini isi dari gambar3" > gambar3.jpg
+mohamadfaiz@mohamadfaiz-VirtualBox:~/projek$ echo "ini isi dari gambar4" > gambar4.jpg
+mohamadfaiz@mohamadfaiz-VirtualBox:~/projek$ echo "ini isi dari gambar5" > gambar5.jpg
+mohamadfaiz@mohamadfaiz-VirtualBox:~/projek$ echo "ini isi dari data1" > data1.zip
+mohamadfaiz@mohamadfaiz-VirtualBox:~/projek$ echo "ini isi dari data2" > data2.zip
+mohamadfaiz@mohamadfaiz-VirtualBox:~/projek$ echo "ini isi dari data3" > data3.zip
+mohamadfaiz@mohamadfaiz-VirtualBox:~/projek$ echo "ini isi dari data4" > data4.zip
+mohamadfaiz@mohamadfaiz-VirtualBox:~/projek$ echo "ini isi dari data5" > data5.zip
+mohamadfaiz@mohamadfaiz-VirtualBox:~/projek$ echo "ini isi dari file1" > file1.log
+mohamadfaiz@mohamadfaiz-VirtualBox:~/projek$ echo "ini isi dari file2" > file2.log
+mohamadfaiz@mohamadfaiz-VirtualBox:~/projek$ echo "ini isi dari file2" > file3.log
+mohamadfaiz@mohamadfaiz-VirtualBox:~/projek$ echo "nama saya mohamad faiz h. ali kelas d sistem informasi" > file4.log
+mohamadfaiz@mohamadfaiz-VirtualBox:~/projek$ echo "nim:05301425079" > file5.log
+
+
+LANGKAH 2
+
+#MEMINDAHKAN FILE TXT KE FOLDER DOCUMENTS
+mohamadfaiz@mohamadfaiz-VirtualBox:~/projek$ find . -type f -name "*txt" -exec mv {} documents/ \;
+mv: './documents/file1.txt' and 'documents/file1.txt' are the same file
+mv: './documents/file3.txt' and 'documents/file3.txt' are the same file
+
+#MEMINDAHKAN FILE JPG KE FOLDER IMAGES
+mohamadfaiz@mohamadfaiz-VirtualBox:~/projek$ find . -type f -name "*jpg" -exec mv {} images/ \;
+mv: './images/gambar5.jpg' and 'images/gambar5.jpg' are the same file
+mv: './images/gambar1.jpg' and 'images/gambar1.jpg' are the same file
+mv: './images/gambar4.jpg' and 'images/gambar4.jpg' are the same file
+mv: './images/gambar3.jpg' and 'images/gambar3.jpg' are the same file
+mv: './images/gambar2.jpg' and 'images/gambar2.jpg' are the same file
+
+#MEMINDAHKAN FILE ZIP KE FOLDER ARCHIVES
+mohamadfaiz@mohamadfaiz-VirtualBox:~/projek$ find . -type f -name "*zip" -exec mv {} archives/ \;
+mv: './archives/data5.zip' and 'archives/data5.zip' are the same file
+mv: './archives/data1.zip' and 'archives/data1.zip' are the same file
+mv: './archives/data4.zip' and 'archives/data4.zip' are the same file
+mv: './archives/data3.zip' and 'archives/data3.zip' are the same file
+mv: './archives/data2.zip' and 'archives/data2.zip' are the same 
+
+#MENYALIN FILE LOG KE FOLDER LOGS
+mohamadfaiz@mohamadfaiz-VirtualBox:~/projek$ find . -type f -name "*log" -exec cp {} logs/ \;
+cp: './logs/file2.log' and 'logs/file2.log' are the same file
+cp: './logs/file1.log' and 'logs/file1.log' are the same file
+cp: './logs/file3.log' and 'logs/file3.log' are the same file
+cp: './logs/file4.log' and 'logs/file4.log' are the same file
+
+
+LANGKAH 3
+
+#PENCARIAN BERDASARKAN NAMA FILE
+mohamadfaiz@mohamadfaiz-VirtualBox:~/projek$ find documents -name "file3.txt"
+documents/file3.txt
+
+#PENCARIAN BERDASARKAN UKURAN FILE
+mohamadfaiz@mohamadfaiz-VirtualBox:~/projek$ find . -type f -size -500k
+./file2.log
+./file1.log
+./file3.log
+./file4.log
+./documents/file1.txt
+./documents/file3.txt
+./documents/file5.txt
+./documents/file2.txt
+./documents/file4.txt
+./logs/file2.log
+./logs/file1.log
+./logs/file3.log
+./logs/file4.log
+./logs/file5.log
+./file5.log
+./images/gambar5.jpg
+./images/gambar1.jpg
+./images/gambar4.jpg
+./images/gambar3.jpg
+./images/gambar2.jpg
+./archives/data5.zip
+./archives/data1.zip
+./archives/data4.zip
+./archives/data3.zip
+./archives/data2.zip
+
+#PENCARIAN BERDASARKAN ISI KONTEN
+mohamadfaiz@mohamadfaiz-VirtualBox:~/projek$ grep -r "faiz"
+file4.log:nama saya mohamad faiz h. ali kelas d sistem informasi
+logs/file4.log:nama saya mohamad faiz h. ali kelas d sistem informasi
+
+
+LANGKAH 4
+
+#MEMBUAT LAPORAN STATISTIK 
+mohamadfaiz@mohamadfaiz-VirtualBox:~/projek$ echo "laporan statistik File System" > report.txt
+mohamadfaiz@mohamadfaiz-VirtualBox:~/projek$ echo "=============================" >> report.txt
+mohamadfaiz@mohamadfaiz-VirtualBox:~/projek$ echo "" >> report.txt
+mohamadfaiz@mohamadfaiz-VirtualBox:~/projek$ echo "Jumlah total file dalam proyek:" >> report.txt
+mohamadfaiz@mohamadfaiz-VirtualBox:~/projek$ ls -lR | grep "^-" | wc -l >> report.txt
+mohamadfaiz@mohamadfaiz-VirtualBox:~/projek$ echo "" >> report.txt
+mohamadfaiz@mohamadfaiz-VirtualBox:~/projek$ echo "Jumlah total folder dalam proyek:" >> report.txt
+mohamadfaiz@mohamadfaiz-VirtualBox:~/projek$ ls -lR | grep "^d" | wc -l >> report.txt
+mohamadfaiz@mohamadfaiz-VirtualBox:~/projek$ echo "" >> report.txt
+mohamadfaiz@mohamadfaiz-VirtualBox:~/projek$ echo "Ukuran total direktori proyek:" >> report.txt
+mohamadfaiz@mohamadfaiz-VirtualBox:~/projek$ du -sh >> report.txt
+mohamadfaiz@mohamadfaiz-VirtualBox:~/projek$ echo "" >> report.txt
+mohamadfaiz@mohamadfaiz-VirtualBox:~/projek$ echo "===Akhir Laporan===" >> report.txt
