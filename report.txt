@@ -1,0 +1,13 @@
+LAPORAN STATISTIK FILE SISTEM
+=============================
+
+Jumlah total file dalam proyek:
+26
+
+Jumlah total folder dalam proyek:
+4
+
+Ukuran total direktori proyek:
+124K	.
+
+===Akhir Laporan===
